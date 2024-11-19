@@ -6,7 +6,7 @@ pymdown-extensions
 # Requirements for core
 jinja2~=3.0
 markdown
-mkdocs-material-extensions
+mkdocs-material
 pygments~=2.16
 pymdown-extensions~=10.2
 
