@@ -3,12 +3,14 @@
 ## Node List
 
 1530 Swift
+
 Hetzner Online FSN1
+
 Hetzner Online HEL1
 
 Pop
     
-* Physical Location: US Missouri
+* Physical Location: US, DE, FL
 * No SLA guarantee
 
 Access Method
