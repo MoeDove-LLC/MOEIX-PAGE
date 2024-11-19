@@ -29,7 +29,6 @@ MoeDove IX is a non-commercial Internet Exchange Point (IXP) established in 2024
 
 
 ## Configure
-We have three route servers, with 2 different policies  
 
 **If you don't know what this is, please establish sessions to `RS Regular` only**  
 
@@ -46,7 +45,7 @@ We have three route servers, with 2 different policies
 
 ## Members
 
-See members list: [Members](\members)
+See members list: [Members](https://ixpm.moeq.ing/customer/details)
 
 ## Limitations
 
