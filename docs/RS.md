@@ -1,4 +1,4 @@
-Configuration of Poema IX Route Server at AS40115
+Configuration of MoeDove IX Route Server at AS40115
 ======================================================================
 
 BGP sessions default configuration

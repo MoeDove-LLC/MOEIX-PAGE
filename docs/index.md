@@ -54,9 +54,9 @@ See members list: [Members](\members)
 There are some security regulations for the IX peering LAN and the IX access port (usually eth1 for the IX VM).  
 
 * Only permitted MAC addresses will be allowed
-* arp-proxy and ndp-proxy must be disabled on the IX port. You can only respond the Neighbor Discovery packet that was sent to the Poema IX allocated `IX LAN` IP.
+* arp-proxy and ndp-proxy must be disabled on the IX port. You can only respond the Neighbor Discovery packet that was sent to the MoeDove IX allocated `IX LAN` IP.
 * L3 joining only. Bridging our port to other switches are not allowed.
-* Participants must not announce ("leak") Poema IX peering LAN to other networks to reduce the potential attack surface.
+* Participants must not announce ("leak") MoeDove IX peering LAN to other networks to reduce the potential attack surface.
 * MOE IX does NOT support trunk port or VLAN mapping to our switches.
 * Ethertypes: All forwarded frames must have one of the following ether types:
     * 0x0806 - ARP
