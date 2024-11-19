@@ -1,21 +1,22 @@
-# MoeIX
-Moe Internet Exchanges
+# MoeDoveIX
+MoeDove Internet Exchanges
 
 * A non-commercial Internet exchange point
-* Operated by MoeQing Network
+* Operated by MoeDove LLC
 
 ## Introduction
 
-MoeIX is a non-commercial Internet Exchange Point (IXP) established in 2020. It provides traffic exchange services mainly for small ISPs, private networks. MoeIX is for learning and experimentation only and is not allowed to be used for commercial services and has no SLA.
+MoeIX is a non-commercial Internet Exchange Point (IXP) established in 2024. It provides traffic exchange services mainly for small ISPs, private networks. MoeIX is for learning and experimentation only and is not allowed to be used for commercial services and has no SLA.
 
 ## Current Location
 
-* Seattle, Washington, USA
+* Kansas City, Missouri, USA
 
 ## Join
 
 1. Join via VM
-2. Join via tunnel
+2. Join via VLAN
+3. Join via Cross-Connect
 
 ## Requirement
 
@@ -26,10 +27,6 @@ MoeIX is a non-commercial Internet Exchange Point (IXP) established in 2020. It 
 * Only send traffic to destinations advertised by BGP on the Peering LAN
 * Does not send any multicast (except ARP/IPv6 ND) packets
 
-## IX LAN prefix
-
-* IPv4: `23.146.72.192/26`
-* IPv6: `2a0a:280:f000:3::/64`
 
 ## Configure
 We have three route servers, with 2 different policies  
@@ -37,32 +34,15 @@ We have three route servers, with 2 different policies
 **If you don't know what this is, please establish sessions to `RS Regular` only**  
 
 * RS1, RS2
-    * AS210979
+    * AS40115
     * Regular route server
     * [Filtering Policy](\RS#default-filtering-policy)
     * [Communities](\RS#announcement-control-via-bgp-communities)
     * In a nutshell: **Config the RS session as peering session**
     * You can connect to this RS without any concern, we will do IRR and RPKI validation for you.
     * A BGP connection with `RS1` is mandatory and you must **announce at least one IPv6 route from your own network**.
-    * IPv4:
-        * RS1: `23.146.72.193`
-        * RS2: `23.146.72.194`
-        * IPv4 session is optional
-    * IPv6:
-        * RS1: `2a0a:280:f000:3::1`
-        * RS2: `2a0a:280:f000:3::2`
+    * IPv4 session is optional
 
-* RS3
-    * AS210979
-    * Transit route server
-    * Your route will be transit to limewave via MoeQing Network
-    * [Filtering Policy](\RS#default-filtering-policy)
-    * [Communities](\RS#announcement-control-via-bgp-communities)
-    * In a nutshell: **Config the RS session as upstream**
-    * IPv4:
-        * RS3: `23.146.72.195`
-    * IPv6:
-        * RS3: `2a0a:280:f000:3::3`
 
 ## Members
 

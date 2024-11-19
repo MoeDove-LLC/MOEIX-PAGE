@@ -2,7 +2,7 @@
 
 ## Connection status
 
-For real time data, check out our [Looking Glass](https://lg-moeix.moeqing.com:8443/)
+For real time data, check out our [Looking Glass](https://ixpm.moeq.ing/)
 
 | ASN | Name | AS-SET | RS1 | RS2 | RS3 |
 |-----|-----|-----|-----|-----|-----|
@@ -34,9 +34,9 @@ For real time data, check out our [Looking Glass](https://lg-moeix.moeqing.com:8
 | 200754 | [SHADOWRHYTHM](https://bgp.tools/as/200754) | AS200754:AS-SHADOWRHYTHM | - {: neigh_ip='2a0a:280:f000:3:0:20:754:0' RS='RS1' } | - {: neigh_ip='2a0a:280:f000:3:0:20:754:0' RS='RS2' } | - {: neigh_ip='2a0a:280:f000:3:0:20:754:0' RS='RS3' } |
 
 <script>
-let rs_list = ["RS1:2a0a:280:f000:3::1","RS2:2a0a:280:f000:3::2","RS3:2a0a:280:f000:3::3"];
-let lg_baseurl = "https://lg-moeix.moeqing.com:8443/";
-let lg_json_api = "https://lgapi-moeix.moeqing.com:8443/bird?RS=";
+#let rs_list = ["RS1:2a0a:280:f000:3::1","RS2:2a0a:280:f000:3::2","RS3:2a0a:280:f000:3::3"];
+#let lg_baseurl = "https://lg-moeix.moeqing.com:8443/";
+#let lg_json_api = "https://lgapi-moeix.moeqing.com:8443/bird?RS=";
 
 function get_state_url(num,name,type,proxy_url,baseurl){
     if (num === 0){

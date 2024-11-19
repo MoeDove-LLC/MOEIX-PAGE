@@ -1,26 +1,22 @@
-# MOEIX POP List
+# MoeDoveIX POP List
 
 ## Node List
 
-Limewave-SEA
+1530 Swift
+Hetzner Online FSN1
+Hetzner Online HEL1
 
 Pop
     
-* Physical Location: US Seattle
+* Physical Location: US Missouri
 * No SLA guarantee
 
 Access Method
 
-=== "Tunnel"
-
-    1. OpenVPN
-    2. GRETAP
-    3. VXLAN
-
 === "IX VM"
     |Virt| CPU| Mem| Disk| MRC    |
     |----|----|----|-----|--------|
-    | LXC| 1C |0.5G| 8G  | Free   |
+    | KVM| 1C |0.5G| 8G  | 2 $    |
 
     ???+ "VM Access Requirements"
         1. You must have your own intranet (tunnel-based is fine) and include our provided VM in your network.
@@ -28,7 +24,7 @@ Access Method
         3. The network interface attached on the IX VM is only used for constructing and connecting your internal network tunnel and not for any other services.
         4. You must peering with Route Server 1 and announce at least one active routes. Otherwise your free VM will be reclaimed.
         5. Learning with a humble attitude and be nice.
-    ???+ "Free IX VM Rules"
+    ???+ "IX VM Rules"
         * Comply with the laws of the United States.
         * Personal use only; transfer, rental, and commercial uses are prohibited.
         * Cyber attacks are not allowed, such as ARP attack, ARP hijacking, scanning weak passwords, malicious exhaustion, DDoS, Trojan horses, and interfering with the operation of other networks and servers.
@@ -53,16 +49,6 @@ Access Method
             
     ### VM Connectivity
     
-    Network Connections
-    
-    All **outgoing** connections from the IX VM follow the routing policies outlined below:
-    
-    | Dst IP           | Dst port                | Connection         | Speed     | MTU  |
-    |------------------|-------------------------|--------------------|-----------|------|
-    | 0.0.0.0/0        | `0~9999`                | wgcf(Cloudflare)   | 250M/250M | 1440 |
-    | 0.0.0.0/0        | `10000~65535`<br>ICMP   | Limewave           | 250M/250M | 1500 |
-    | 0.0.0.0/0        | Any(Public IP)          | MoeQing Network    | 250M/250M | 1480 |
-    
     Connection Service  
     
     * Port forward:
@@ -73,13 +59,9 @@ Access Method
         * ssh port:
             Connect to port 22 of VMID machine
             * :7🂠🂠🂠 → :22
-
-=== "Limewave VM"
-
-    Please contact Limewave support
     
 === "Physical"
 
-    Not implement yet
+    Please contact us.
 
 
