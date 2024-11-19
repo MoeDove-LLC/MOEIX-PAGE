@@ -6,7 +6,7 @@ MoeDove Internet Exchanges
 
 ## Introduction
 
-MoeIX is a non-commercial Internet Exchange Point (IXP) established in 2024. It provides traffic exchange services mainly for small ISPs, private networks. MoeIX is for learning and experimentation only and is not allowed to be used for commercial services and has no SLA.
+MoeDove IX is a non-commercial Internet Exchange Point (IXP) established in 2024. It provides traffic exchange services mainly for small ISPs, private networks. MoeDove IX is for learning and experimentation only and is not allowed to be used for commercial services and has no SLA.
 
 ## Current Location
 
@@ -22,7 +22,7 @@ MoeIX is a non-commercial Internet Exchange Point (IXP) established in 2024. It 
 
 * Has a valid Public ASN
 * Has at least /48 IPv6 address
-* Have up-to-date PeeringDB information (preferably)
+* Have up-to-date PeeringDB information
 * Have up-to-date RIR Whois information
 * Only send traffic to destinations advertised by BGP on the Peering LAN
 * Does not send any multicast (except ARP/IPv6 ND) packets
