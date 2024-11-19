@@ -22,7 +22,6 @@ markdown_extensions:
 nav:
   - MOEIX: index.md
   - PoP List: PoP-List.md
-  - Member List: members.md
   - Route Server: RS.md
 site_url: https://moeio.org
 repo_url: https://github.com/MoeDove-LLC/MOEIX-PAGE
