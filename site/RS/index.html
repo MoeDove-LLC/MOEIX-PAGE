@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration-of-poema-ix-route-server-at-as210979" class="md-skip">
+        <a href="#configuration-of-poema-ix-route-server-at-as40115" class="md-skip">
           Skip to content
         </a>
       
@@ -568,7 +568,7 @@
   
 
 
-<h1 id="configuration-of-poema-ix-route-server-at-as210979">Configuration of Poema IX Route Server at AS210979</h1>
+<h1 id="configuration-of-poema-ix-route-server-at-as40115">Configuration of Poema IX Route Server at AS40115</h1>
 <h2 id="bgp-sessions-default-configuration">BGP sessions default configuration</h2>
 <ul>
 <li><strong>Passive</strong> sessions are configured toward neighbors.</li>
@@ -617,49 +617,49 @@ are <strong>rejected</strong>.</li>
 <td>Origin ASN is NOT included in client's AS-SET</td>
 <td>65530:0</td>
 <td>None</td>
-<td>210979:65530:0</td>
+<td>40115:65530:0</td>
 </tr>
 <tr>
 <td>Origin ASN is included in client's AS-SET</td>
 <td>65530:1</td>
 <td>None</td>
-<td>210979:65530:1</td>
+<td>40115:65530:1</td>
 </tr>
 <tr>
 <td>Prefix matched by a RPKI ROA for the authorized origin ASN</td>
 <td>65530:2</td>
 <td>None</td>
-<td>210979:65530:2</td>
+<td>40115:65530:2</td>
 </tr>
 <tr>
 <td>Route authorized soley because of a client white list entry</td>
 <td>65530:3</td>
 <td>None</td>
-<td>210979:65530:3</td>
+<td>40115:65530:3</td>
 </tr>
 <tr>
 <td>Prefix matched by an entry of the ARIN Whois DB dump</td>
 <td>65530:4</td>
 <td>None</td>
-<td>210979:65530:4</td>
+<td>40115:65530:4</td>
 </tr>
 <tr>
 <td>Prefix is included in client's AS-SET</td>
 <td>65530:5</td>
 <td>None</td>
-<td>210979:65530:5</td>
+<td>40115:65530:5</td>
 </tr>
 <tr>
 <td>Prefix is NOT included in client's AS-SET</td>
 <td>65530:6</td>
 <td>None</td>
-<td>210979:65530:6</td>
+<td>40115:65530:6</td>
 </tr>
 <tr>
 <td>AS-PATH contains transit providers</td>
 <td>65530:7</td>
 <td>None</td>
-<td>210979:65530:7</td>
+<td>40115:65530:7</td>
 </tr>
 </tbody>
 </table>
@@ -945,7 +945,7 @@ are <strong>rejected</strong>.</li>
 <h2 id="blackhole-filtering">Blackhole filtering</h2>
 <ul>
 <li>
-<p>Blackhole filtering of more specific IP prefixes can be requested by tagging them with the following <strong>BGP communities</strong>: 65534:0, 210979:666:0,  65535:666 (<a href="https://tools.ietf.org/html/rfc7999#section-5">BLACKHOLE</a> well-known community)</p>
+<p>Blackhole filtering of more specific IP prefixes can be requested by tagging them with the following <strong>BGP communities</strong>: 65534:0, 40115:666:0,  65535:666 (<a href="https://tools.ietf.org/html/rfc7999#section-5">BLACKHOLE</a> well-known community)</p>
 </li>
 <li>
 <p>By default, routes are <strong>propagated</strong> to all the clients unless they have been explicitly configured to not receive them.</p>
@@ -977,80 +977,80 @@ are <strong>rejected</strong>.</li>
 <tr>
 <td>Do not announce to any client</td>
 <td>None</td>
-<td>rt:0:210979</td>
-<td>210979:0:210979</td>
+<td>rt:0:40115</td>
+<td>40115:0:40115</td>
 </tr>
 <tr>
 <td>Announce to peer, even if tagged with the previous community</td>
 <td>None</td>
 <td>None</td>
-<td>210979:210979:peer_as</td>
+<td>40115:40115:peer_as</td>
 </tr>
 <tr>
 <td>Do not announce to peer</td>
 <td>0:peer_as</td>
 <td>rt:0:peer_as</td>
-<td>210979:0:peer_as</td>
+<td>40115:0:peer_as</td>
 </tr>
 <tr>
 <td>Prepend the announcing ASN once to peer</td>
 <td>65504:peer_as</td>
 <td>rt:65504:peer_as</td>
-<td>210979:65504:peer_as</td>
+<td>40115:65504:peer_as</td>
 </tr>
 <tr>
 <td>Prepend the announcing ASN twice to peer</td>
 <td>65505:peer_as</td>
 <td>rt:65505:peer_as</td>
-<td>210979:65505:peer_as</td>
+<td>40115:65505:peer_as</td>
 </tr>
 <tr>
 <td>Prepend the announcing ASN thrice to peer</td>
 <td>65506:peer_as</td>
 <td>rt:65506:peer_as</td>
-<td>210979:65506:peer_as</td>
+<td>40115:65506:peer_as</td>
 </tr>
 <tr>
 <td>Prepend the announcing ASN once to any</td>
 <td>None</td>
-<td>rt:65501:210979</td>
-<td>210979:65501:210979</td>
+<td>rt:65501:40115</td>
+<td>40115:65501:40115</td>
 </tr>
 <tr>
 <td>Prepend the announcing ASN twice to any</td>
 <td>None</td>
-<td>rt:65502:210979</td>
-<td>210979:65502:210979</td>
+<td>rt:65502:40115</td>
+<td>40115:65502:40115</td>
 </tr>
 <tr>
 <td>Prepend the announcing ASN thrice to any</td>
 <td>None</td>
-<td>rt:65503:210979</td>
-<td>210979:65503:210979</td>
+<td>rt:65503:40115</td>
+<td>40115:65503:40115</td>
 </tr>
 <tr>
 <td>Add NO_EXPORT to any</td>
 <td>None</td>
-<td>rt:65507:210979</td>
-<td>210979:65507:210979</td>
+<td>rt:65507:40115</td>
+<td>40115:65507:40115</td>
 </tr>
 <tr>
 <td>Add NO_ADVERTISE to any</td>
 <td>None</td>
-<td>rt:65508:210979</td>
-<td>210979:65508:210979</td>
+<td>rt:65508:40115</td>
+<td>40115:65508:40115</td>
 </tr>
 <tr>
 <td>Add NO_EXPORT to peer</td>
 <td>65509:peer_as</td>
 <td>rt:65509:peer_as</td>
-<td>210979:65509:peer_as</td>
+<td>40115:65509:peer_as</td>
 </tr>
 <tr>
 <td>Add NO_ADVERTISE to peer</td>
 <td>65510:peer_as</td>
 <td>rt:65510:peer_as</td>
-<td>210979:65510:peer_as</td>
+<td>40115:65510:peer_as</td>
 </tr>
 </tbody>
 </table>
@@ -1079,119 +1079,119 @@ are <strong>rejected</strong>.</li>
 <td>Generic code: the route must be treated as rejected</td>
 <td>65531:0</td>
 <td>None</td>
-<td>210979:65531:0</td>
+<td>40115:65531:0</td>
 </tr>
 <tr>
 <td>1</td>
 <td>Invalid AS_PATH length</td>
 <td>65531:1</td>
 <td>None</td>
-<td>210979:65531:1</td>
+<td>40115:65531:1</td>
 </tr>
 <tr>
 <td>2</td>
 <td>Prefix is bogon</td>
 <td>65531:2</td>
 <td>None</td>
-<td>210979:65531:2</td>
+<td>40115:65531:2</td>
 </tr>
 <tr>
 <td>3</td>
 <td>Prefix is in global blacklist</td>
 <td>65531:3</td>
 <td>None</td>
-<td>210979:65531:3</td>
+<td>40115:65531:3</td>
 </tr>
 <tr>
 <td>4</td>
 <td>Invalid AFI</td>
 <td>65531:4</td>
 <td>None</td>
-<td>210979:65531:4</td>
+<td>40115:65531:4</td>
 </tr>
 <tr>
 <td>5</td>
 <td>Invalid NEXT_HOP</td>
 <td>65531:5</td>
 <td>None</td>
-<td>210979:65531:5</td>
+<td>40115:65531:5</td>
 </tr>
 <tr>
 <td>6</td>
 <td>Invalid left-most ASN</td>
 <td>65531:6</td>
 <td>None</td>
-<td>210979:65531:6</td>
+<td>40115:65531:6</td>
 </tr>
 <tr>
 <td>7</td>
 <td>Invalid ASN in AS_PATH</td>
 <td>65531:7</td>
 <td>None</td>
-<td>210979:65531:7</td>
+<td>40115:65531:7</td>
 </tr>
 <tr>
 <td>8</td>
 <td>Transit-free ASN in AS_PATH</td>
 <td>65531:8</td>
 <td>None</td>
-<td>210979:65531:8</td>
+<td>40115:65531:8</td>
 </tr>
 <tr>
 <td>9</td>
 <td>Origin ASN not in IRRDB AS-SETs</td>
 <td>65531:9</td>
 <td>None</td>
-<td>210979:65531:9</td>
+<td>40115:65531:9</td>
 </tr>
 <tr>
 <td>10</td>
 <td>IPv6 prefix not in global unicast space</td>
 <td>65531:10</td>
 <td>None</td>
-<td>210979:65531:10</td>
+<td>40115:65531:10</td>
 </tr>
 <tr>
 <td>11</td>
 <td>Prefix is in client blacklist</td>
 <td>65531:11</td>
 <td>None</td>
-<td>210979:65531:11</td>
+<td>40115:65531:11</td>
 </tr>
 <tr>
 <td>12</td>
 <td>Prefix not in IRRDB AS-SETs</td>
 <td>65531:12</td>
 <td>None</td>
-<td>210979:65531:12</td>
+<td>40115:65531:12</td>
 </tr>
 <tr>
 <td>13</td>
 <td>Invalid prefix length</td>
 <td>65531:13</td>
 <td>None</td>
-<td>210979:65531:13</td>
+<td>40115:65531:13</td>
 </tr>
 <tr>
 <td>14</td>
 <td>RPKI INVALID route</td>
 <td>65531:14</td>
 <td>None</td>
-<td>210979:65531:14</td>
+<td>40115:65531:14</td>
 </tr>
 <tr>
 <td>15</td>
 <td>Never via route-servers ASN in AS_PATH</td>
 <td>65531:15</td>
 <td>None</td>
-<td>210979:65531:15</td>
+<td>40115:65531:15</td>
 </tr>
 <tr>
 <td>65535</td>
 <td>Unknown</td>
 <td>65531:65535</td>
 <td>None</td>
-<td>210979:65531:65535</td>
+<td>40115:65531:65535</td>
 </tr>
 </tbody>
 </table>

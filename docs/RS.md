@@ -1,4 +1,4 @@
-Configuration of Poema IX Route Server at AS210979
+Configuration of Poema IX Route Server at AS40115
 ======================================================================
 
 BGP sessions default configuration
@@ -44,14 +44,14 @@ are **rejected**.
 
 | Validity state | Standard | Extended | Large |
 | --- | --- | --- | --- |
-| Origin ASN is NOT included in client's AS-SET | 65530:0 | None | 210979:65530:0 |
-| Origin ASN is included in client's AS-SET | 65530:1 | None | 210979:65530:1 |
-| Prefix matched by a RPKI ROA for the authorized origin ASN | 65530:2 | None | 210979:65530:2 |
-| Route authorized soley because of a client white list entry | 65530:3 | None | 210979:65530:3 |
-| Prefix matched by an entry of the ARIN Whois DB dump | 65530:4 | None | 210979:65530:4 |
-| Prefix is included in client's AS-SET | 65530:5 | None | 210979:65530:5 |
-| Prefix is NOT included in client's AS-SET | 65530:6 | None | 210979:65530:6 |
-| AS-PATH contains transit providers | 65530:7 | None | 210979:65530:7 |
+| Origin ASN is NOT included in client's AS-SET | 65530:0 | None | 40115:65530:0 |
+| Origin ASN is included in client's AS-SET | 65530:1 | None | 40115:65530:1 |
+| Prefix matched by a RPKI ROA for the authorized origin ASN | 65530:2 | None | 40115:65530:2 |
+| Route authorized soley because of a client white list entry | 65530:3 | None | 40115:65530:3 |
+| Prefix matched by an entry of the ARIN Whois DB dump | 65530:4 | None | 40115:65530:4 |
+| Prefix is included in client's AS-SET | 65530:5 | None | 40115:65530:5 |
+| Prefix is NOT included in client's AS-SET | 65530:6 | None | 40115:65530:6 |
+| AS-PATH contains transit providers | 65530:7 | None | 40115:65530:7 |
 
 ### RPKI BGP Prefix Origin Validation
 
@@ -147,7 +147,7 @@ Blackhole filtering
 -------------------
 
 
-* Blackhole filtering of more specific IP prefixes can be requested by tagging them with the following **BGP communities**: 65534:0, 210979:666:0,  65535:666 ([BLACKHOLE](https://tools.ietf.org/html/rfc7999#section-5) well-known community)
+* Blackhole filtering of more specific IP prefixes can be requested by tagging them with the following **BGP communities**: 65534:0, 40115:666:0,  65535:666 ([BLACKHOLE](https://tools.ietf.org/html/rfc7999#section-5) well-known community)
 
 * By default, routes are **propagated** to all the clients unless they have been explicitly configured to not receive them.
 * IPv4 routes are propagated **unchanged** to clients.
@@ -173,19 +173,19 @@ Announcement control via BGP communities
 
 | Function | Standard | Extended | Large |
 | --- | --- | --- | --- |
-| Do not announce to any client | None | rt:0:210979 | 210979:0:210979 |
-| Announce to peer, even if tagged with the previous community | None | None | 210979:210979:peer_as |
-| Do not announce to peer | 0:peer_as | rt:0:peer_as | 210979:0:peer_as |
-| Prepend the announcing ASN once to peer | 65504:peer_as | rt:65504:peer_as | 210979:65504:peer_as |
-| Prepend the announcing ASN twice to peer | 65505:peer_as | rt:65505:peer_as | 210979:65505:peer_as |
-| Prepend the announcing ASN thrice to peer | 65506:peer_as | rt:65506:peer_as | 210979:65506:peer_as |
-| Prepend the announcing ASN once to any | None | rt:65501:210979 | 210979:65501:210979 |
-| Prepend the announcing ASN twice to any | None | rt:65502:210979 | 210979:65502:210979 |
-| Prepend the announcing ASN thrice to any | None | rt:65503:210979 | 210979:65503:210979 |
-| Add NO_EXPORT to any | None | rt:65507:210979 | 210979:65507:210979 |
-| Add NO_ADVERTISE to any | None | rt:65508:210979 | 210979:65508:210979 |
-| Add NO_EXPORT to peer | 65509:peer_as | rt:65509:peer_as | 210979:65509:peer_as |
-| Add NO_ADVERTISE to peer | 65510:peer_as | rt:65510:peer_as | 210979:65510:peer_as |
+| Do not announce to any client | None | rt:0:40115 | 40115:0:40115 |
+| Announce to peer, even if tagged with the previous community | None | None | 40115:40115:peer_as |
+| Do not announce to peer | 0:peer_as | rt:0:peer_as | 40115:0:peer_as |
+| Prepend the announcing ASN once to peer | 65504:peer_as | rt:65504:peer_as | 40115:65504:peer_as |
+| Prepend the announcing ASN twice to peer | 65505:peer_as | rt:65505:peer_as | 40115:65505:peer_as |
+| Prepend the announcing ASN thrice to peer | 65506:peer_as | rt:65506:peer_as | 40115:65506:peer_as |
+| Prepend the announcing ASN once to any | None | rt:65501:40115 | 40115:65501:40115 |
+| Prepend the announcing ASN twice to any | None | rt:65502:40115 | 40115:65502:40115 |
+| Prepend the announcing ASN thrice to any | None | rt:65503:40115 | 40115:65503:40115 |
+| Add NO_EXPORT to any | None | rt:65507:40115 | 40115:65507:40115 |
+| Add NO_ADVERTISE to any | None | rt:65508:40115 | 40115:65508:40115 |
+| Add NO_EXPORT to peer | 65509:peer_as | rt:65509:peer_as | 40115:65509:peer_as |
+| Add NO_ADVERTISE to peer | 65510:peer_as | rt:65510:peer_as | 40115:65510:peer_as |
 
 
 Reject reasons
@@ -197,23 +197,23 @@ Reject reasons
 
 | ID | Reason | Standard | Extended | Large |
 | --- | --- | --- | --- | --- |
-| 0 | Generic code: the route must be treated as rejected | 65531:0 | None | 210979:65531:0 |
-| 1 | Invalid AS_PATH length | 65531:1 | None | 210979:65531:1 |
-| 2 | Prefix is bogon | 65531:2 | None | 210979:65531:2 |
-| 3 | Prefix is in global blacklist | 65531:3 | None | 210979:65531:3 |
-| 4 | Invalid AFI | 65531:4 | None | 210979:65531:4 |
-| 5 | Invalid NEXT_HOP | 65531:5 | None | 210979:65531:5 |
-| 6 | Invalid left-most ASN | 65531:6 | None | 210979:65531:6 |
-| 7 | Invalid ASN in AS_PATH | 65531:7 | None | 210979:65531:7 |
-| 8 | Transit-free ASN in AS_PATH | 65531:8 | None | 210979:65531:8 |
-| 9 | Origin ASN not in IRRDB AS-SETs | 65531:9 | None | 210979:65531:9 |
-| 10 | IPv6 prefix not in global unicast space | 65531:10 | None | 210979:65531:10 |
-| 11 | Prefix is in client blacklist | 65531:11 | None | 210979:65531:11 |
-| 12 | Prefix not in IRRDB AS-SETs | 65531:12 | None | 210979:65531:12 |
-| 13 | Invalid prefix length | 65531:13 | None | 210979:65531:13 |
-| 14 | RPKI INVALID route | 65531:14 | None | 210979:65531:14 |
-| 15 | Never via route-servers ASN in AS_PATH | 65531:15 | None | 210979:65531:15 |
-| 65535 | Unknown | 65531:65535 | None | 210979:65531:65535 |
+| 0 | Generic code: the route must be treated as rejected | 65531:0 | None | 40115:65531:0 |
+| 1 | Invalid AS_PATH length | 65531:1 | None | 40115:65531:1 |
+| 2 | Prefix is bogon | 65531:2 | None | 40115:65531:2 |
+| 3 | Prefix is in global blacklist | 65531:3 | None | 40115:65531:3 |
+| 4 | Invalid AFI | 65531:4 | None | 40115:65531:4 |
+| 5 | Invalid NEXT_HOP | 65531:5 | None | 40115:65531:5 |
+| 6 | Invalid left-most ASN | 65531:6 | None | 40115:65531:6 |
+| 7 | Invalid ASN in AS_PATH | 65531:7 | None | 40115:65531:7 |
+| 8 | Transit-free ASN in AS_PATH | 65531:8 | None | 40115:65531:8 |
+| 9 | Origin ASN not in IRRDB AS-SETs | 65531:9 | None | 40115:65531:9 |
+| 10 | IPv6 prefix not in global unicast space | 65531:10 | None | 40115:65531:10 |
+| 11 | Prefix is in client blacklist | 65531:11 | None | 40115:65531:11 |
+| 12 | Prefix not in IRRDB AS-SETs | 65531:12 | None | 40115:65531:12 |
+| 13 | Invalid prefix length | 65531:13 | None | 40115:65531:13 |
+| 14 | RPKI INVALID route | 65531:14 | None | 40115:65531:14 |
+| 15 | Never via route-servers ASN in AS_PATH | 65531:15 | None | 40115:65531:15 |
+| 65535 | Unknown | 65531:65535 | None | 40115:65531:65535 |
 
 
 
