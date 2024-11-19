@@ -6,7 +6,7 @@ MoeDove Internet Exchanges
 
 ## Introduction
 
-MoeDove IX is a non-commercial Internet Exchange Point (IXP) established in 2024. It provides traffic exchange services mainly for small ISPs, private networks. MoeDove IX is for learning and experimentation only and is not allowed to be used for commercial services and has no SLA.
+MoeDove IX is a non-commercial Internet Exchange Point (IXP) established in 2024. It provides traffic exchange services mainly for small ISPs, private networks.
 
 ## Current Location
 
